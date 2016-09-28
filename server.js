@@ -126,7 +126,7 @@ app.get('/ui/madi.png', function (req, res) {
 var names = [];
 // '/submit-name/:name' we can fetch name via req.params.name
 // '/submit-name?name=xxx' we can fetch this query param via 
-app.get('/submit-name/:name', function (req, res) { 
+app.get('/submit-name', function (req, res) { 
    // Get the name from the request
    //var name = req.params.name;
    var name = req.query.name;
