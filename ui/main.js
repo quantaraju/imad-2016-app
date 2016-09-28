@@ -23,9 +23,7 @@ button.onclick = function() {
 
 	// capture the response and store it in a variable
 	request.onreadystatechange = function () {
-		console.log("One");
 		if (request.readyState === XMLHttpRequest.DONE) {
-			console.log("two");
 			// Take some action
 			if (request.status === 200) {
 				var counter = request.responseText;
@@ -33,9 +31,9 @@ button.onclick = function() {
 				span.innerHTML = counter.toString();			
 			}
 		}
-		console.log("three");
 	};
 	// Make the request
 	request.open('GET', 'http://quantaraju.imad.hasura-app.io/counter', true);
 	//request.open('GET', 'http://localhost:8080/counter', true);
+	request.send(null);
 }
